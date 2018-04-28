@@ -168,9 +168,8 @@ void search_menu()
 		slt_p(&slt, 0, 3);
 		
 		if(slt == 0)
-		{
 			return;
-		}
+		
 		
 		hl(25);
 		p("Nhap tu khoa tim kiem: "); r_str(key, 50);
@@ -189,9 +188,8 @@ void search_menu()
 				while(tr != NULL)
 				{
 					if(filting(u_key, slt, f_slt, tr->s))
-					{
 						add_std(&srsL, tr->s);
-					}
+					
 					tr = tr->next;
 				}
 				list_all(&srsL);
@@ -203,9 +201,8 @@ void search_menu()
 					sts(tr->s, &stsd);
 					stsd = upper(stsd);
 					if(strstr(stsd, u_key))
-					{
 						add_std(&srsL, tr->s);
-					}
+					
 					free(stsd);
 //					stsd = NULL;
 					tr = tr->next;
